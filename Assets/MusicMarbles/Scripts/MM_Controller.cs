@@ -41,8 +41,8 @@ namespace Assets.MusicMarbles.Scripts {
 
         public void PlayTone(float pitch)
         {
-            Debug.Log(pitch / 10);
-            _audioSource.pitch = pitch / 10;
+            Debug.Log(10 / pitch);
+            _audioSource.pitch = 10 / pitch;
             _audioSource.PlayOneShot(_tone);
         }
     }
