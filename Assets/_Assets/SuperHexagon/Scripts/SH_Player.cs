@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SuperHexagon.Scripts
 {
-    public class ShPlayer : MonoBehaviour
+    public class SH_Player : MonoBehaviour
     {
         [SerializeField] private float _moveSpeed = 500f;
         private float _movement;
@@ -20,6 +20,7 @@ namespace SuperHexagon.Scripts
         private void OnTriggerEnter2D(Collider2D other)
         {
             Debug.Log("Death");
+            Time.timeScale = 0;
         }
     }
 }

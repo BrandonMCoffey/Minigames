@@ -1552,7 +1552,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5af53d2b0ba621c489ce662fa5d113dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _moveSpeed: 400
+  _moveSpeed: 500
 --- !u!58 &1369143876
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1687,9 +1687,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _spawnRate: 1
   _hexagonPrefabs:
-  - {fileID: 1827616757503607020, guid: 4e769abb99ebd0240b286b725ce27aba, type: 3}
-  - {fileID: 5283585700939562581, guid: f3685f633c09a9c44adb8013ec80a8b5, type: 3}
   - {fileID: 7046007354489447135, guid: 7054b8dff0bc5a24e9ee9fecfe91a5d1, type: 3}
+  - {fileID: 5283585700939562581, guid: f3685f633c09a9c44adb8013ec80a8b5, type: 3}
+  - {fileID: 1827616757503607020, guid: 4e769abb99ebd0240b286b725ce27aba, type: 3}
 --- !u!1 &1613749687
 GameObject:
   m_ObjectHideFlags: 0

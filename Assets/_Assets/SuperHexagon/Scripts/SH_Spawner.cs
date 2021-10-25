@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace SuperHexagon.Scripts
 {
-    public class ShSpawner : MonoBehaviour
+    public class SH_Spawner : MonoBehaviour
     {
         [SerializeField] private float _spawnRate = 1f;
         [SerializeField] private List<GameObject> _hexagonPrefabs = new List<GameObject>();
@@ -13,6 +13,11 @@ namespace SuperHexagon.Scripts
         private void Update()
         {
             if (Time.time < _nextTimeToSpawn) return;
+
+            if (_hexagonPrefabs.Count == 0) {
+                Debug.LogError("No objects to spawn");
+                return;
+            }
 
             int index = Random.Range(0, _hexagonPrefabs.Count);
             Transform obj = Instantiate(_hexagonPrefabs[index], Vector3.zero, Quaternion.identity).transform;

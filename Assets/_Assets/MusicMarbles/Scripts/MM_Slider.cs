@@ -5,7 +5,7 @@ using Utility_Scripts.FloatRef;
 namespace MusicMarbles.Scripts
 {
     [RequireComponent(typeof(Slider))]
-    public class MmSlider : MonoBehaviour
+    public class MM_Slider : MonoBehaviour
     {
         [SerializeField] private FloatVariable _value = null;
         private Slider _slider;

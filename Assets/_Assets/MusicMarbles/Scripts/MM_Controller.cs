@@ -5,7 +5,7 @@ using Utility_Scripts.GameWide;
 namespace MusicMarbles.Scripts
 {
     [RequireComponent(typeof(AudioSource))]
-    public class MmController : MonoBehaviour
+    public class MM_Controller : MonoBehaviour
     {
         [SerializeField] private float _edgeRadius = 0.04f;
         [SerializeField] private AudioClip _tone = null;
@@ -20,6 +20,7 @@ namespace MusicMarbles.Scripts
 
         private void Update()
         {
+            if (MouseUtils.IsMouseOverUI()) return;
             if (Input.GetMouseButtonDown(0)) {
                 _tempLine = new GameObject("Line", typeof(LineRenderer)).GetComponent<LineRenderer>();
                 _tempLine.transform.SetParent(transform);
@@ -32,7 +33,7 @@ namespace MusicMarbles.Scripts
             }
             if (Input.GetMouseButtonUp(0) && _tempLine != null) {
                 _tempLine.SetPosition(1, MouseUtils.GetMousePosition2D());
-                MmMusic music = _tempLine.gameObject.AddComponent<MmMusic>();
+                MM_Music music = _tempLine.gameObject.AddComponent<MM_Music>();
                 music.SetSource(this);
                 EdgeCollider2D col = _tempLine.gameObject.AddComponent<EdgeCollider2D>();
                 col.SetPoints(new List<Vector2> { _tempLine.GetPosition(0), _tempLine.GetPosition(1) });
@@ -43,7 +44,6 @@ namespace MusicMarbles.Scripts
 
         public void PlayTone(float pitch)
         {
-            Debug.Log(10 / pitch);
             _audioSource.pitch = 10 / pitch;
             _audioSource.PlayOneShot(_tone);
         }

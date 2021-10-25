@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SuperHexagon.Scripts
 {
-    public class ShCamera : MonoBehaviour
+    public class SH_Camera : MonoBehaviour
     {
         [SerializeField] private float _intervalTime = 3f;
         [SerializeField] private float _moveSpeedMin = 10f;

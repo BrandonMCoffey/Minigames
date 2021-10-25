@@ -3,7 +3,7 @@ using Utility_Scripts.FloatRef;
 
 namespace MusicMarbles.Scripts
 {
-    public class MmSpawner : MonoBehaviour
+    public class MM_Spawner : MonoBehaviour
     {
         [SerializeField] private GameObject _spawnObject = null;
         [SerializeField] private FloatReference _spawnRate = null;

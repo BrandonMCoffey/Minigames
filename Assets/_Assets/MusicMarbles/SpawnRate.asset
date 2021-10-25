@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e944ac563cdb0af4da8e2cfe10694199, type: 3}
   m_Name: SpawnRate
   m_EditorClassIdentifier: 
-  Value: 0.5
+  Value: 1

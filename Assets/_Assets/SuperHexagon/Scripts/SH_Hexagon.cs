@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace SuperHexagon.Scripts
 {
-    public class ShHexagon : MonoBehaviour
+    public class SH_Hexagon : MonoBehaviour
     {
         [SerializeField] private float _shrinkSpeed = 3f;
 
