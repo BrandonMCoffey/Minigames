@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f375f38b441da3468477ad422deca90, type: 3}
+  m_Name: Blue Slime
+  m_EditorClassIdentifier: 
+  Name: Blue Slime
+  Color: {r: 0, g: 0, b: 1, a: 1}
+  Damage: 1
+  Size: 0.5
+  IdleTimeMinMax: {x: 2, y: 4}
+  JumpRadiusMinMax: {x: 1, y: 2}
+  JumpAnticipationTime: 0.2
+  IdleAnimationTime: 0.4
+  JumpHeightMultiplier: 0.5
+  AirTimeMultiplier: 0.7
+  ShadowSizeMultiplier: 0.5
+  Idle: {fileID: -8630991955572811457, guid: d80a62df0abaad34695654a3f5752d33, type: 3}
+  AnticipateJump: {fileID: -9127010208028059584, guid: d80a62df0abaad34695654a3f5752d33, type: 3}
+  Jumping: {fileID: 6763138253326615428, guid: d80a62df0abaad34695654a3f5752d33, type: 3}
+  Falling: {fileID: -7600229186259386102, guid: d80a62df0abaad34695654a3f5752d33, type: 3}
+  Landing: {fileID: 3664391670104668620, guid: d80a62df0abaad34695654a3f5752d33, type: 3}
