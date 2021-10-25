@@ -1,7 +1,9 @@
 using UnityEngine;
 
-namespace Assets.SuperHexagon.Scripts {
-    public class SH_Player : MonoBehaviour {
+namespace SuperHexagon.Scripts
+{
+    public class ShPlayer : MonoBehaviour
+    {
         [SerializeField] private float _moveSpeed = 500f;
         private float _movement;
 

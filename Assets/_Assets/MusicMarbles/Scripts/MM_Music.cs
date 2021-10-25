@@ -1,10 +1,12 @@
 using UnityEngine;
 
-namespace Assets.MusicMarbles.Scripts {
+namespace MusicMarbles.Scripts
+{
     [RequireComponent(typeof(LineRenderer))]
-    public class MM_Music : MonoBehaviour {
+    public class MmMusic : MonoBehaviour
+    {
         private LineRenderer _lineRenderer;
-        private MM_Controller _source;
+        private MmController _source;
         private float _dist;
 
         private void Start()
@@ -18,7 +20,7 @@ namespace Assets.MusicMarbles.Scripts {
             _source.PlayTone(_dist);
         }
 
-        public void SetSource(MM_Controller source)
+        public void SetSource(MmController source)
         {
             _source = source;
         }

@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts.Logic {
-    public class ButtonTrigger : MonoBehaviour {
+namespace TabletopCars.Scripts.Logic
+{
+    public class ButtonTrigger : MonoBehaviour
+    {
         [SerializeField] private bool _oneTimePress = false;
         [SerializeField] private List<Gate> _gates = new List<Gate>();
 

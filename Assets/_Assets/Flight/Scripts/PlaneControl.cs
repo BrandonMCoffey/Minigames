@@ -1,32 +1,38 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class PlaneControl : MonoBehaviour
+namespace Flight.Scripts
 {
-    public int speedMultiplier;
-    public float speed;
-    public float minSpeed;
-    public float maxSpeed;
-    public GameObject camera;
-    public float cameraBias;
-
-    void FixedUpdate()
+    public class PlaneControl : MonoBehaviour
     {
-        Vector3 moveCam = transform.position - transform.forward * 12f + transform.up * 10.0f;
-        camera.transform.position = camera.transform.position * cameraBias + moveCam * (1 - cameraBias);
-        camera.transform.LookAt(transform.position);
+        [SerializeField] private int _speedMultiplier = 40;
+        [SerializeField] private float _minSpeed = 20;
+        [SerializeField] private float _maxSpeed = 200;
+        [SerializeField] private Transform _camera = null;
+        [SerializeField] private float _cameraBias = 0.5f;
 
-        transform.position += transform.forward * Time.deltaTime * speed;
-        speed -= transform.forward.y * Time.deltaTime * speedMultiplier;
-        if (speed < minSpeed)
+        private float _speed;
+
+        private void Awake()
         {
-            speed = minSpeed;
+            if (_camera == null) {
+                _camera = Camera.main.transform;
+            }
         }
-        else if (speed > maxSpeed)
+
+        private void FixedUpdate()
         {
-            speed = maxSpeed;
+            Vector3 moveCam = transform.position - transform.forward * 12f + transform.up * 10.0f;
+            _camera.position = _camera.position * _cameraBias + moveCam * (1 - _cameraBias);
+            _camera.LookAt(transform.position);
+
+            transform.position += transform.forward * Time.deltaTime * _speed;
+            _speed -= transform.forward.y * Time.deltaTime * _speedMultiplier;
+            if (_speed < _minSpeed) {
+                _speed = _minSpeed;
+            } else if (_speed > _maxSpeed) {
+                _speed = _maxSpeed;
+            }
+            transform.Rotate(Input.GetAxis("Vertical"), 0.0f, -Input.GetAxis("Horizontal"));
         }
-        transform.Rotate(Input.GetAxis("Vertical"), 0.0f, -Input.GetAxis("Horizontal"));
     }
 }

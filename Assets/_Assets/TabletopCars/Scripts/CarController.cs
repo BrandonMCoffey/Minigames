@@ -1,8 +1,10 @@
 using UnityEngine;
 
-namespace Assets.Scripts {
+namespace TabletopCars.Scripts
+{
     [RequireComponent(typeof(Rigidbody))]
-    public class CarController : MonoBehaviour {
+    public class CarController : MonoBehaviour
+    {
         private const float YOffset = 0.35f;
 
         [SerializeField] private float _moveSpeed = 5;

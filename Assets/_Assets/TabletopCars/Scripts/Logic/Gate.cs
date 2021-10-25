@@ -1,8 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
-namespace Assets.Scripts.Logic {
-    public class Gate : MonoBehaviour {
+namespace TabletopCars.Scripts.Logic
+{
+    public class Gate : MonoBehaviour
+    {
         [SerializeField] private float _animationTimer = 1;
         [SerializeField] private Vector3 _distanceToMove = Vector3.down;
 

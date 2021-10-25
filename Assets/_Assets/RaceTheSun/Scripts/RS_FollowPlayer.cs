@@ -1,6 +1,8 @@
 using UnityEngine;
 
-namespace Assets.RaceTheSun.Scripts {
-    public class RS_FollowPlayer : MonoBehaviour {
+namespace RaceTheSun.Scripts
+{
+    public class RsFollowPlayer : MonoBehaviour
+    {
     }
 }

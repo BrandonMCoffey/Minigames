@@ -2,9 +2,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Scripts {
+namespace TabletopCars.Scripts
+{
     [RequireComponent(typeof(Image))]
-    public class ButtonHelper : MonoBehaviour {
+    public class ButtonHelper : MonoBehaviour
+    {
         public int Number;
         public string LevelKey;
         [SerializeField] private Color _starBase = Color.gray;

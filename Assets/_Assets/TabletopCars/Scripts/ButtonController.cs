@@ -3,8 +3,10 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Assets.Scripts {
-    public class ButtonController : MonoBehaviour {
+namespace TabletopCars.Scripts
+{
+    public class ButtonController : MonoBehaviour
+    {
         [SerializeField] private Button _template = null;
 
         private List<ButtonHelper> _buttonHelpers;

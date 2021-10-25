@@ -1,8 +1,10 @@
 using UnityEngine;
 
-namespace Assets.Scripts {
+namespace TabletopCars.Scripts
+{
     [RequireComponent(typeof(Collider))]
-    public class Collectible : MonoBehaviour {
+    public class Collectible : MonoBehaviour
+    {
         public int ScoreAmount = 1;
         [SerializeField] private GameObject _art = null;
 

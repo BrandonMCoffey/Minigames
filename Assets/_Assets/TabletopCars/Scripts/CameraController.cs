@@ -1,6 +1,8 @@
 using UnityEngine;
 
-namespace Assets.Scripts {
-    public class CameraController : MonoBehaviour {
+namespace TabletopCars.Scripts
+{
+    public class CameraController : MonoBehaviour
+    {
     }
 }

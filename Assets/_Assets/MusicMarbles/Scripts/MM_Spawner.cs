@@ -1,9 +1,10 @@
-using Assets.Utility.Scripts.FloatRef;
 using UnityEngine;
-using UnityEngine.UI;
+using Utility_Scripts.FloatRef;
 
-namespace Assets.MusicMarbles.Scripts {
-    public class MM_Spawner : MonoBehaviour {
+namespace MusicMarbles.Scripts
+{
+    public class MmSpawner : MonoBehaviour
+    {
         [SerializeField] private GameObject _spawnObject = null;
         [SerializeField] private FloatReference _spawnRate = null;
         private float _previousTimeSpawned;

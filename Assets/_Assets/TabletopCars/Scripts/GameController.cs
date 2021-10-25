@@ -4,8 +4,10 @@ using System.Linq;
 using TMPro;
 using UnityEngine;
 
-namespace Assets.Scripts {
-    public class GameController : MonoBehaviour {
+namespace TabletopCars.Scripts
+{
+    public class GameController : MonoBehaviour
+    {
         public static GameController Instance;
 
         [SerializeField] private CarController _carController = null;

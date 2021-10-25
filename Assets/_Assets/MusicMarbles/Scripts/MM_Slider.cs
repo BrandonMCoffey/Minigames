@@ -1,10 +1,12 @@
-using Assets.Utility.Scripts.FloatRef;
 using UnityEngine;
 using UnityEngine.UI;
+using Utility_Scripts.FloatRef;
 
-namespace Assets.MusicMarbles.Scripts {
+namespace MusicMarbles.Scripts
+{
     [RequireComponent(typeof(Slider))]
-    public class MM_Slider : MonoBehaviour {
+    public class MmSlider : MonoBehaviour
+    {
         [SerializeField] private FloatVariable _value = null;
         private Slider _slider;
 

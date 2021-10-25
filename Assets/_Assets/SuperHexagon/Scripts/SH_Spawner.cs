@@ -1,12 +1,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.SuperHexagon.Scripts {
-    public class SH_Spawner : MonoBehaviour {
+namespace SuperHexagon.Scripts
+{
+    public class ShSpawner : MonoBehaviour
+    {
         [SerializeField] private float _spawnRate = 1f;
         [SerializeField] private List<GameObject> _hexagonPrefabs = new List<GameObject>();
         private float _nextTimeToSpawn;
-        private static float[] _rotationIndex = new[] {0f, 60f, 120f, 180f, 240f, 300f};
+        private static float[] _rotationIndex = new[] { 0f, 60f, 120f, 180f, 240f, 300f };
 
         private void Update()
         {
